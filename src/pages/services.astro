@@ -1,7 +1,67 @@
-<section id="services" class="h-screen pt-12">
+<section id="services" class="pt-12">
     <h2>Nos services</h2>
 
-    <div class="flex">
-        
+    <div class="flex"></div>
+</section>
+
+<!-- Section avec un texte à gauche, une barre au centre et un texte à droite -->
+<section class="two-column-section">
+    <div class="left-text">
+        <h2>Texte Gauche</h2>
+        <p>
+            Ceci est un exemple de texte placé à gauche. Tu peux ajouter ici des
+            informations supplémentaires.
+        </p>
+    </div>
+    
+    <!-- Barre grise au centre -->
+    <div class="center-bar"></div>
+    
+    <div class="right-text">
+        <h2>Texte Droite</h2>
+        <p>
+            Ceci est un exemple de texte placé à droite. Cela permet
+            d'équilibrer visuellement la page.
+        </p>
     </div>
 </section>
+
+<style>
+    /* Section avec deux colonnes (texte à gauche et à droite) */
+    .two-column-section {
+        display: flex;
+        justify-content: space-between;
+        align-items: stretch; /* Pour étirer les colonnes verticalement */
+        padding: 100px 50px;
+        background-color: #e0e0e0;
+    }
+
+    .left-text,
+    .right-text {
+        width: 45%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .left-text h2,
+    .right-text h2 {
+        font-size: 1.8em;
+        margin-bottom: 15px;
+    }
+
+    .left-text p,
+    .right-text p {
+        font-size: 1.2em;
+    }
+
+    /* Barre centrale grise avec un design moderne */
+    .center-bar {
+        width: 5px;
+        background-color: #b0b0b0;
+        border-radius: 10px;
+        height: auto;
+        min-height: 100px; /* Hauteur minimale pour être visible */
+        align-self: center; /* Centre la barre verticalement */
+    }
+</style>
