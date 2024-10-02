@@ -99,30 +99,46 @@ import Image2 from "../../public/img/test2.jpg"
     // Parallaxe pour l'image
     window.addEventListener("scroll", function () {
         const scrolled = window.pageYOffset;
-        const parallaxImage = document.querySelector(".parallax-image");
-        const imageTitle = document.querySelector(".image-title");
+        const parallaxImage = document.querySelector(
+            ".parallax-image",
+        ) as HTMLElement;
+        const imageTitle = document.querySelector(
+            ".image-title",
+        ) as HTMLElement;
 
-        // Déplace l'image légèrement lors du défilement
-        parallaxImage.style.transform = "translateY(" + scrolled * 0.3 + "px)";
+        // Vérifier si parallaxImage et imageTitle existent avant de les manipuler
+        if (parallaxImage) {
+            // Déplace l'image légèrement lors du défilement
+            parallaxImage.style.transform =
+                "translateY(" + scrolled * 0.3 + "px)";
+        }
 
-        // Faire disparaître le titre en descendant
-        const screenPosition = window.innerHeight / 1.3;
-        if (scrolled > screenPosition) {
-            imageTitle.classList.add("hidden");
-        } else {
-            imageTitle.classList.remove("hidden");
+        if (imageTitle) {
+            // Faire disparaître le titre en descendant
+            const screenPosition = window.innerHeight / 1.3;
+            if (scrolled > screenPosition) {
+                imageTitle.classList.add("hidden");
+            } else {
+                imageTitle.classList.remove("hidden");
+            }
         }
     });
 
     // Apparition du texte lorsque l'utilisateur descend
     window.addEventListener("scroll", function () {
-        const textSection = document.querySelector(".content-section");
-        const sectionPosition = textSection.getBoundingClientRect().top;
-        const screenPosition = window.innerHeight / 1.3;
+        const textSection = document.querySelector(
+            ".content-section",
+        ) as HTMLElement;
 
-        // Si la section atteint une certaine position, ajoute la classe 'visible'
-        if (sectionPosition < screenPosition) {
-            textSection.classList.add("visible");
+        // Vérifier si textSection existe avant de la manipuler
+        if (textSection) {
+            const sectionPosition = textSection.getBoundingClientRect().top;
+            const screenPosition = window.innerHeight / 1.3;
+
+            // Si la section atteint une certaine position, ajoute la classe 'visible'
+            if (sectionPosition < screenPosition) {
+                textSection.classList.add("visible");
+            }
         }
     });
 </script>
