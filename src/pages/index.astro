@@ -2,8 +2,8 @@
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/header.astro';
 import Presentation from './presentation.astro';
-import Social from './social.astro';
-import Environment from './environment.astro';
+import Social from './services.astro';
+import Environment from './who_are_we.astro';
 ---
 
 <Layout title="Welcome to Astro.">
@@ -23,11 +23,11 @@ import Environment from './environment.astro';
 		document.querySelector('#presentation')?.scrollIntoView({ behavior: 'smooth' });
 	});
 
-	document.querySelector('#to_social')?.addEventListener('click', () => {
-		document.querySelector('#social')?.scrollIntoView({ behavior: 'smooth' });
+	document.querySelector('#to_services')?.addEventListener('click', () => {
+		document.querySelector('#services')?.scrollIntoView({ behavior: 'smooth' });
 	});
 
-	document.querySelector('#to_environment')?.addEventListener('click', () => {		
-		document.querySelector('#environment')?.scrollIntoView({ behavior: 'smooth' });
+	document.querySelector('#to_who_are_we')?.addEventListener('click', () => {		
+		document.querySelector('#who_are_we')?.scrollIntoView({ behavior: 'smooth' });
 	});
 </script>
