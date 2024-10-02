@@ -2,8 +2,8 @@
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/header.astro';
 import Presentation from './presentation.astro';
-import Social from './services.astro';
-import Environment from './who_are_we.astro';
+import Services from './services.astro';
+import WhoAreWe from './who_are_we.astro';
 ---
 
 <Layout title="Welcome to Astro.">
@@ -12,9 +12,9 @@ import Environment from './who_are_we.astro';
 
 		<Presentation />
 
-		<Social />
+		<Services />
 
-		<Environment />
+		<WhoAreWe />
 	</main>
 </Layout>
 
@@ -31,3 +31,13 @@ import Environment from './who_are_we.astro';
 		document.querySelector('#who_are_we')?.scrollIntoView({ behavior: 'smooth' });
 	});
 </script>
+
+<style>
+	@font-face {
+		font-family: 'Arrow';
+		font-style: normal;
+		font-weight: 400;
+		font-display: swap;
+		src: url(/fonts/agrandir-narrow.otf) format('opentype');
+	}
+</style>
