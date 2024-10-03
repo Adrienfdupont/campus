@@ -5,12 +5,11 @@ import Logo from '../../public/img/logo.png';
 
 <section id="presentation" class="relative flex justify-center items-center min-h-screen">
     <div class="absolute inset-0">
-        <img src={Image.src} alt="Image" class="w-full h-full object-cover opacity-0 animate-image-appearance"/>
+        <img src={Image.src} alt="Image" class="w-full h-full object-cover opacity-0 animate-appearance"/>
     </div>
 
-    <!-- <p class="text-white text-6xl whitespace-nowrap z-10 mb-72 bg-black opacity-0 animate-text-appearance p-8">Faire du <span class="text-primary">vert</span> la couleur du savoir</p> -->
     <div>
-        <div class="bg-white opacity-60 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-1/2 h-96 z-10"></div>
-        <img src={Logo.src} alt="Logo" class="w-1/2 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20"/>
+        <div class="bg-white absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-1/2 h-96 z-10 opacity-0 animate-logo-background"></div>
+        <img src={Logo.src} alt="Logo" class="w-1/2 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20 opacity-0 animate-appearance"/>
     </div>
 </section>

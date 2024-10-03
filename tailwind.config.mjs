@@ -12,15 +12,15 @@ export default {
 				arrow: ['Arrow'],
 			},
 			animation: {
-				'text-appearance': 'text-appearance 2s ease-in-out forwards',
-				'image-appearance': 'image-appearance 1s ease-in-out forwards',
+				'logo-background': 'logo-background 2s ease-in-out forwards',
+				'appearance': 'appearance 1s ease-in-out forwards',
 			},
 			keyframes: {
-				'text-appearance': {
+				'logo-background': {
 					from: { opacity: 0 },
-					to: { opacity: 0.7 }
+					to: { opacity: 0.6 }
 				},
-				'image-appearance': {
+				'appearance': {
 					from: { opacity: 0 },
 					to: { opacity: 1 }
 				}
