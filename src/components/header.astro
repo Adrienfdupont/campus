@@ -1,11 +1,21 @@
-<header class="px-8 py-2 flex justify-between sticky top-0 left-0 h-12 bg-primary">
-    <h1>Horizon scholar</h1>
+---
+import Logo from '../../public/img/logo_no_baseline.png'
+---
 
-    <nav class="text-secondary text-xl">
-        <li class="flex gap-x-4 cursor-pointer">
-            <ul id="to_presentation" class="hover:bg-secondary hover:text-primary py-1 px-2 rounded flex transition duration-300 ease-in-out">Présentation</ul>
-            <ul id="to_services" class="hover:bg-secondary hover:text-primary py-1 px-2 rounded flex transition duration-300 ease-in-out">Services</ul>
-            <ul id="to_who_are_we" class="hover:bg-secondary hover:text-primary py-1 px-2 rounded flex transition duration-300 ease-in-out">Qui sommes-nous ?</ul>
+<header class="flex justify-between fixed top-0 left-0 w-full h-12 bg-white z-30 px-4">
+    <img src={Logo.src} id="to_presentation" alt="Logo de Horizon Scholars" class="h-12 cursor-pointer" />
+
+    <nav class="text-primary text-xl py-2">
+        <li class="flex gap-x-4">
+            <ul id="to_services" class="hover:bg-primary hover:text-white py-1 px-2 rounded flex transition duration-300 ease-in-out cursor-pointer">
+                Services
+            </ul>
+            <ul id="to_who_are_we" class="hover:bg-primary hover:text-white py-1 px-2 rounded flex transition duration-300 ease-in-out cursor-pointer">
+                Qui sommes-nous ?
+            </ul>
+            <ul id="to_contact" class="hover:bg-primary hover:text-white py-1 px-2 rounded flex transition duration-300 ease-in-out cursor-pointer">
+                Contact
+            </ul>
         </li>
     </nav>
 </header>
