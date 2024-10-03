@@ -4,10 +4,12 @@ import Header from '../components/header.astro';
 import Presentation from './presentation.astro';
 import Services from './services.astro';
 import WhoAreWe from './who_are_we.astro';
+import Footer from '../components/footer.astro';
+import Contact from './contact.astro';
 ---
 
 <Layout title="Welcome to Astro.">
-	<main>
+	<main class="font-arrow">
 		<Header />
 
 		<Presentation />
@@ -15,6 +17,10 @@ import WhoAreWe from './who_are_we.astro';
 		<Services />
 
 		<WhoAreWe />
+
+		<Contact />
+		
+		<Footer />
 	</main>
 </Layout>
 
@@ -24,13 +30,17 @@ import WhoAreWe from './who_are_we.astro';
 	document.querySelector('#to_presentation')?.addEventListener('click', () => {
 		document.querySelector('#presentation')?.scrollIntoView({ behavior: 'smooth' });
 	});
-
+	
 	document.querySelector('#to_services')?.addEventListener('click', () => {
 		document.querySelector('#services')?.scrollIntoView({ behavior: 'smooth' });
 	});
 
 	document.querySelector('#to_who_are_we')?.addEventListener('click', () => {		
 		document.querySelector('#who_are_we')?.scrollIntoView({ behavior: 'smooth' });
+	});
+	
+	document.querySelector('#to_contact')?.addEventListener('click', () => {		
+		document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' });
 	});
 </script>
 

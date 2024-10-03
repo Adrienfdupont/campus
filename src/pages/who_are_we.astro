@@ -1,3 +1,39 @@
-<section id="who_are_we" class="h-screen pt-12">
-    <h2>Qui sommes-nous ?</h2>
+---
+import Image from "../../public/img/test.png"
+---
+<section id="who_are_we" class="p-20">
+    <h2 class="text-2xl">Qui sommes-nous ?</h2><br>
+
+    <div class="clearfix">
+        <img src={Image.src} alt="Image à gauche" class="left" width="600" />
+        <p class="text">
+        Nous offrons un accompagnement personnalisé pour évaluer, concevoir et
+        mettre en œuvre des initiatives vertes adaptées aux besoins des campus,
+        que ce soit en matière de gestion des déchets, d'efficacité énergétique,
+        de réduction de l'empreinte carbone, ou d'engagement social. <br><br>
+        Les établissements partenaires qui remplissent nos critères de durabilité
+        reçoivent le label HORIZON SCHOLAR, gage de leur engagement pour un
+        avenir plus responsable et durable. <br><br>
+        HORIZON SCHOLAR est une entreprise spécialisée dans la mise en place de solutions de Responsabilité
+        Sociétale des Entreprises (RSE) au sein des campus universitaires. <br><br>
+        Notre mission est d'accompagner les établissements d'enseignement supérieur
+        dans leur transition écologique, en les aidant à adopter des pratiques
+        plus durables et éco-responsables.
+        </p>
+    </div>
 </section>
+
+<style>
+    .left {
+        float: left;
+        margin-right: 20px;
+    }
+    .clearfix::after {
+        text-align: center;
+        content: "";
+        display: table;
+        clear: both;
+    }
+    .text {
+    }
+</style>
